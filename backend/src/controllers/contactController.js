@@ -1,7 +1,6 @@
 const { validationResult } = require('express-validator');
 const Contact = require('../models/Contact');
 
-
 const submitContactForm = async (req, res) => {
     // Perform input validation
     const errors = validationResult(req);
