@@ -27,10 +27,13 @@ dbConnection.then(() => {
 
 const productRoutes = require('./routes/productsRoutes');
 const contactRoutes = require('./routes/contactRoutes');
+const aboutRoutes = require('./routes/aboutRoutes');
 
 
 app.use('/api/product', productRoutes);
 app.use('/api/contact', contactRoutes);
+app.use('/api/about', aboutRoutes);
+
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
