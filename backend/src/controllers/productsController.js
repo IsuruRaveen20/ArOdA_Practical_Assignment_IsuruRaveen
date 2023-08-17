@@ -18,6 +18,23 @@ const getProducts = async (req, res) => {
     }
 };
 
+const getProductDetails = async (req, res) => {
+    try {
+        const productId = req.params.id; // Assuming you're passing the product ID in the URL
+        const product = await Product.findById(productId);
+
+        // If no product is found, return a message
+        if (!product) {
+            return res.status(404).json({ message: 'Product not found' });
+        }
+
+        // Return the retrieved product details
+        res.json(product);
+    } catch (error) {
+        res.status(500).json({ message: 'An error occurred while fetching product details' });
+    }
+};
+
 //Insert About Section for my data Insertion Purpose
 const submitProduct = async (req, res) => {
     // Perform input validation
@@ -39,5 +56,6 @@ const submitProduct = async (req, res) => {
 
 module.exports = {
     getProducts,
+    getProductDetails,
     submitProduct,
 };
