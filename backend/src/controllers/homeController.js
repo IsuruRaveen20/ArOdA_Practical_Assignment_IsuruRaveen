@@ -3,7 +3,7 @@ const Home = require('../models/Home');
 
 const getHomeContent = async(req, res) => {
     try {
-        const homeContent = await Home.all();
+        const homeContent = await Home.findOne();
         if (!homeContent) {
             return res.status(404).json({ message: 'No home content found' });
         }
@@ -31,7 +31,8 @@ const submitHomeContent = async (req, res) => {
         console.log(error);
         res.status(500).json({ message: 'An error occurred while Submitting!..' });
     }
-}
+};
+
 module.exports = {
     getHomeContent,
     submitHomeContent,
