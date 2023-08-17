@@ -1,0 +1,49 @@
+/* Navbar.css */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+  }
+  
+  ul {
+    list-style-type: none;
+    display: flex;
+    gap: 100px; /* Adjust the gap between navigation items */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  p {
+    font-family: 'League Spartan';
+    font-size: 48px;
+    font-weight: 800;
+    line-height: -50px;
+    letter-spacing: 0em;
+    text-align: left; /* Align the logo to the left */
+    margin: 0; /* Remove default margin */
+    margin-right: 100px; /* Add space between logo and navigation items */
+  }
+  
+  li {
+    font-family: 'League Spartan';
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 60px;
+    letter-spacing: 0em;
+    text-align: left;
+  
+    /* Remove underlines from navigation links */
+    text-decoration: none;
+  }
+  
+  li a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
