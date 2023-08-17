@@ -1,13 +1,21 @@
 const { validationResult } = require('express-validator');
 const About = require('../models/About');
 
-const getAboutContent = (req, res) => {
-    const dummyAboutContent = {
-        title: "About Us",
-        content: "Learn more about our history and values.",
-    };
+const getAboutContent = async (req, res) => {
+    try {
+        // Find the about content from the database
+        const aboutContent = await About.findOne();
 
-    res.json(dummyAboutContent);
+        // If no content is found, return a message
+        if (!aboutContent) {
+            return res.status(404).json({ message: 'No about content found' });
+        }
+
+        // Return the retrieved about content
+        res.json(aboutContent);
+    } catch (error) {
+        res.status(500).json({ message: 'An error occurred while fetching about content' });
+    }
 };
 
 //Insert About Section for my data Insertion Purpose
