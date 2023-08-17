@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import api from '../services/api';
 import { Card, CardContent, CardMedia, Typography, Grid } from '@mui/material';
+// import FlavourHero from './Hero/FlavourHero/FlavourHero';
 
 const Flavour = () => {
   const [flavourContent, setFlavourContent] = useState([]);
@@ -19,6 +20,7 @@ const Flavour = () => {
 
   return (
     <div>
+      {/* <FlavourHero /> */}
       <h1>Flavours</h1>
       <Grid container spacing={2}>
         {flavourContent.map(flavour => (

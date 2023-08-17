@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  background: #ffa89e;
+  background: #9A92F5;
   background-image: url('../../../assets/images/apples.png'), url('../../../assets/images/AppleText.png');
   background-size: cover, contain; /* Set the appropriate sizes for both images */
   background-repeat: no-repeat;
@@ -14,7 +14,7 @@
 }
 
 body {
-  background: #ffa89e;
+  background: #9A92F5;
 }
 
 .image-overlay {
