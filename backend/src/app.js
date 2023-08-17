@@ -11,10 +11,26 @@ const MONGO_URI = process.env.MONGO_URI;
 
 app.use(bodyParser.json());
 
-mongoose.connect(MONGO_URI, {
+const dbConnection = mongoose.connect(MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
+
+dbConnection.then(() => {
+    console.log('Database connected successfully');
+    // Get the connected database name
+    const dbName = mongoose.connection.name;
+    console.log('Connected to database:', dbName);
+}).catch((error) => {
+    console.error('Database connection error:', error);
+});
+
+const productRoutes = require('./routes/productsRoutes');
+const contactRoutes = require('./routes/contactRoutes');
+
+
+app.use('/api/product', productRoutes);
+app.use('/api/contact', contactRoutes);
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
