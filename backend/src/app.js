@@ -28,11 +28,14 @@ dbConnection.then(() => {
 const productRoutes = require('./routes/productsRoutes');
 const contactRoutes = require('./routes/contactRoutes');
 const aboutRoutes = require('./routes/aboutRoutes');
+const homeRoutes = require('./routes/homeRoutes');
+
 
 
 app.use('/api/product', productRoutes);
 app.use('/api/contact', contactRoutes);
 app.use('/api/about', aboutRoutes);
+app.use('/api/home', homeRoutes);
 
 
 app.listen(PORT, () => {
