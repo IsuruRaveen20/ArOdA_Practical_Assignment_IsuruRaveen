@@ -8,7 +8,7 @@ const productController = require('../controllers/productsController');
 const productValidations = require('../validations/productValidations');
 
 router.get('/', productController.getProducts);
-router.get('/:id', productController.getProductDetails); // Add this line for product details
+router.get('/:id', productController.getProductDetails); 
 router.post('/', productValidations, submitProduct);
 
 module.exports = router;
