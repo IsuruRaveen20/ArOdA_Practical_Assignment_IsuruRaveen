@@ -5,9 +5,65 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  /* background-image: url('../../../assets/images/apples.png'), url('../../../assets/images/AppleText.png'); */
+  background: #ffa89e;
+  z-index: -1;
+  background-size: cover, contain;
+  background-repeat: no-repeat;
+  background-position: top center;
+
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  /* Adjust to your preference */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url('../../../assets/images/can.png');
+  background-image: url('../../../assets/images/apples.png'), url('../../../assets/images/AppleText.png');
+
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  /* Adjust to your preference */
+  background-repeat: no-repeat;
+  background-position: center center;
+  /* background-image: url('../../../assets/images/can.png'); */
+  background-image: url('../../../assets/images/can.png');
+  /* background-image: url('../../../assets/images/redMaskgroup.png'); */
+}
+
+.image-overlay {
+  /* Your existing styles for the image overlay */
+}
+
+body {
+  background: #ffa89e;
+}
+
+/* 
+.hero {
+  position: relative;
+  height: 150vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   background: #ffa89e;
   background-image: url('../../../assets/images/apples.png'), url('../../../assets/images/AppleText.png');
-  background-size: cover, contain; /* Set the appropriate sizes for both images */
+  background-size: cover, contain; 
   background-repeat: no-repeat;
   background-position: top center;
   z-index: -1;
@@ -29,3 +85,16 @@ body {
   opacity: 0.8;
   z-index: 0;
 }
+
+.image-overlay1 {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url('../../../assets/images/can.png');
+  background-image: url('../../../assets/images/redMaskgroup.png');
+
+} */
