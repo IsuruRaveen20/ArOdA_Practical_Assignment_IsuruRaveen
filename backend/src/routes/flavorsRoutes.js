@@ -1,9 +1,11 @@
-// src/routes/flavorsRoutes.js
+
 const express = require('express');
-const { getFlavorsContent } = require('../controllers/flavorsController');
+
 const router = express.Router();
+const flavorsController = require('../controllers/flavorsController');
+const flavourValidations = require('../validations/flavourValidations');
 
-
-router.get('/', getFlavorsContent);
+router.get('/', flavorsController.getFlavours);
+router.post('/', flavourValidations, flavorsController.submitFlavour);
 
 module.exports = router;

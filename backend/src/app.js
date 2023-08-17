@@ -29,6 +29,7 @@ const productRoutes = require('./routes/productsRoutes');
 const contactRoutes = require('./routes/contactRoutes');
 const aboutRoutes = require('./routes/aboutRoutes');
 const homeRoutes = require('./routes/homeRoutes');
+const flavourRoutes = require('./routes/flavorsRoutes');
 
 
 
@@ -36,6 +37,7 @@ app.use('/api/product', productRoutes);
 app.use('/api/contact', contactRoutes);
 app.use('/api/about', aboutRoutes);
 app.use('/api/home', homeRoutes);
+app.use('/api/flavour', flavourRoutes);
 
 
 app.listen(PORT, () => {
